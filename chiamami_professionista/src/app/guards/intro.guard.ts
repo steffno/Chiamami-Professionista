@@ -19,6 +19,7 @@ export class IntroGuard implements CanLoad {
 //per fare in modo che l'app verifichi se l'utente abbia visto oppure no l'intro salviamo un booleano nello storage
 // avremmo pure potuto usare la libreria Storage@Capacitor, che funziona meglio, a detta di internet, ma
 // a lezione è stata spiegata iojnic@storage
+
     async canLoad(): Promise<boolean> {
       console.log('prima di const introVista');
       const introVista: boolean | void = await this.storage.get('intro');

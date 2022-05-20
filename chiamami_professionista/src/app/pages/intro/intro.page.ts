@@ -27,7 +27,7 @@ export class IntroPage implements OnInit {
 
   async start(){
     await this.storage.set('intro', true);
-    console.log('in async start setto intro a true', this.storage.get('intro'));
+    console.log('in async start setto intro a true');
     this.router.navigateByUrl('/login', {replaceUrl:true});
   }
 

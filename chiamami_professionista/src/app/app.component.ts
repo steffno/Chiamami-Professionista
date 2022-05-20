@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Platform } from '@ionic/angular';
 import { TranslateService } from '@ngx-translate/core';
 import { LinguaService } from './services/lingua.service';
 
@@ -8,7 +9,11 @@ import { LinguaService } from './services/lingua.service';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent{
-  constructor(private translate: TranslateService, private linguaService: LinguaService) {}
+  constructor(private translate: TranslateService, private linguaService: LinguaService, private platform: Platform) {
+    this.platform.ready().then(() => {
+      this.initTranslate();
+    });
+  }
 
   initTranslate() {
      // Set the default language for translation strings, and the current language.

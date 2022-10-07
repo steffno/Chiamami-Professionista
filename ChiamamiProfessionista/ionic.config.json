@@ -1,0 +1,7 @@
+{
+  "name": "ChiamamiProfessionista",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
